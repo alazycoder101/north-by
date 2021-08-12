@@ -6,11 +6,12 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/nrclient for more book information.
 #---
-["all", Rails.env].each do |seed|
-  seed_file = Rails.root.join("db", "seeds", "#{seed}.rb")
+class CreateShoppingCarts < ActiveRecord::Migration[6.1]
+  def change
+    create_table(:shopping_carts) do |t|
+      t.references(:user, null: false, foreign_key: true)
 
-  if File.exist?(seed_file)
-    require seed_file
-
+      t.timestamps
+    end
   end
 end
