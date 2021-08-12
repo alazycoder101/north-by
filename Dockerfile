@@ -5,7 +5,7 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get install -y --no-install-recommends libpq-dev nodejs vim imagemagick ffmpeg \
   && npm install --unsafe-perm -g yarn
 
-ARG app=/opt/rails_api
+ARG app=/app
 WORKDIR $app
 
 ADD Gemfile Gemfile.lock ./

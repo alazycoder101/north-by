@@ -12,11 +12,11 @@ services:
       - POSTGRES_HOST_AUTH_METHOD=trust
   web:
     build: .
-    command: bundle exec rails s -p 3707 -b '0.0.0.0'
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
-      - .:/opt/rails_api
+      - .:/app
     ports:
-      - "3707:3707"
+      - "3000:3000"
     environment:
       - "RAILS_ENV=development"
       - "DATABASE_HOST=db"
