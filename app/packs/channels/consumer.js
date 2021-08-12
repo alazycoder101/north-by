@@ -6,12 +6,9 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrclient for more book information.
 ***/
-import "@hotwired/turbo-rails"
-import "channels"
-import "core-js/stable"
-import "regenerator-runtime/runtime"
-import * as ActiveStorage from "@rails/activestorage"
-import Rails from "@rails/ujs"
+// Action Cable provides the framework to deal with WebSockets in Rails.
+// You can generate new channels where WebSocket features live using the `bin/rails generate channel` command.
 
-Rails.start()
-ActiveStorage.start()
+import { createConsumer } from "@rails/actioncable"
+
+export default createConsumer()

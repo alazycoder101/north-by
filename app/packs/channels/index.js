@@ -6,12 +6,8 @@
  * We make no guarantees that this code is fit for any purpose.
  * Visit http://www.pragmaticprogrammer.com/titles/nrclient for more book information.
 ***/
-import "@hotwired/turbo-rails"
-import "channels"
-import "core-js/stable"
-import "regenerator-runtime/runtime"
-import * as ActiveStorage from "@rails/activestorage"
-import Rails from "@rails/ujs"
+// Load all the channels within this directory and all subdirectories.
+// Channel files must be named *_channel.js.
 
-Rails.start()
-ActiveStorage.start()
+const channels = require.context('.', true, /_channel\.js$/)
+channels.keys().forEach(channels)
