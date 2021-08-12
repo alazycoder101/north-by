@@ -28,3 +28,5 @@ Things you may want to cover:
 >yarn add tailwindcss@latest postcss@latest autoprefixer@latest
 >yarn add @tailwindcss/forms
 >npx tailwindcss init
+
+>yarn add typescript @babel/preset-typescript
